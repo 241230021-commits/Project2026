@@ -3,30 +3,88 @@
 @section('title', 'Profil')
 
 @section('content')
-    <h1 style="text-align:center;">Profil Saya</h1>
 
-    <div style="
-        max-width:400px;
-        margin:auto;
-        border-radius:15px;
-        padding:20px;
-        background:linear-gradient(135deg, #6a11cb, #2575fc);
-        color:white;
-        text-align:center;
-        box-shadow:0 4px 10px rgba(0,0,0,0.2);
-    ">
-    <img src="{{ asset('images/foto.png') }}"
-        width="120"
-        style="display: block; margin: 15px auto; border-radius:50%;">
-        <h2>Merlinsha Lunny</h2>
 
-        <p>🎓 Sistem Informasi</p>
-        <p>📍 Pontianak</p>
+<div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6">
 
-        <hr>
+    <!-- FOTO + NAMA -->
+    <div class="text-center">
+        <img src="/images/foto.png" 
+             class="w-28 h-28 mx-auto rounded-full border-4 border-green-500 shadow-md">
 
-        <p><b>UNIVERSITAS MUHAMMADIYAH PONTIANAK</p>
+        <h2 class="text-2xl font-bold mt-3">Merlinsha Lunny</h2>
+        <p class="text-gray-500">🎓 Sistem Informasi</p>
+        <p class="text-gray-500">📍 Pontianak</p>
+
+        <!-- BADGE -->
+        <span class="inline-block mt-3 bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+            🌟 Donatur Aktif
+        </span>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 text-center">
+
+        <div class="bg-green-100 p-4 rounded-xl">
+            <p class="text-2xl font-bold text-green-600">Rp 1.500.000</p>
+            <p class="text-sm text-gray-600">Total Donasi</p>
+        </div>
+
+        <div class="bg-blue-100 p-4 rounded-xl">
+            <p class="text-2xl font-bold text-blue-600">25</p>
+            <p class="text-sm text-gray-600">Jumlah Donasi</p>
+        </div>
+
+        <div class="bg-purple-100 p-4 rounded-xl">
+            <p class="text-2xl font-bold text-purple-600">Rp 500.000</p>
+            <p class="text-sm text-gray-600">Dompet Donasi</p>
+        </div>
 
     </div>
-   
+
+    <!-- 🔷 TENTANG -->
+    <div class="mt-8 text-center">
+        <h3 class="text-lg font-bold mb-2">Tentang Saya</h3>
+        <p class="text-gray-600">
+            Saya adalah mahasiswa Sistem Informasi yang memiliki minat dalam 
+            pengembangan web dan teknologi digital. Melalui platform Donasiku, 
+            saya ingin membantu masyarakat untuk lebih mudah berbagi kebaikan 
+            dan menyalurkan bantuan kepada yang membutuhkan.
+        </p>
+    </div>
+
+    <!-- 🔷 RIWAYAT DONASI -->
+    <div class="mt-8">
+        <h3 class="text-lg font-bold mb-3">Riwayat Donasi</h3>
+
+        <div class="bg-gray-50 rounded-xl p-4 shadow">
+
+            <div class="flex justify-between border-b py-2">
+                <span>Bantuan Banjir</span>
+                <span class="text-green-600 font-semibold">Rp 100.000</span>
+            </div>
+
+            <div class="flex justify-between border-b py-2">
+                <span>Donasi Pendidikan</span>
+                <span class="text-green-600 font-semibold">Rp 50.000</span>
+            </div>
+
+            <div class="flex justify-between py-2">
+                <span>Bantuan Kesehatan</span>
+                <span class="text-green-600 font-semibold">Rp 75.000</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 🔷 TOMBOL AKSI -->
+    <div class="mt-8 text-center">
+        <a href="/donasi" 
+           class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg shadow">
+            Donasi Sekarang
+        </a>
+    </div>
+
+</div>
+
 @endsection
